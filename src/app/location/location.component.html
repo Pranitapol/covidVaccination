@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            
+<div class="table-responsive-sm table-responsive-md table-responsive-lg">
+            <table class="table table-striped">
+                <thead>
+                    <th>CenterID</th>
+                    <th>state name</th>
+                    <th>district</th>
+                    <th>pincode</th>
+                    <th>location</th>
+                    <th>name</th>
+
+                </thead>
+                <tbody>
+                    <tr *ngFor="let index of location.centers">
+                        <td>{{index.center_id}}</td>
+                        <td>{{index.state_name}}</td>
+                        <td>{{index.district_name}}</td>
+                        <td>{{index.pincode}}</td>
+                        <td>{{index.location}}</td>
+                        <td>{{index.name}}</td>
+
+                    </tr>
+                </tbody>
+            </table>
+</div>
+        </div>
+    </div>
+</div>

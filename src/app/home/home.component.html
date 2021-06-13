@@ -1,0 +1,68 @@
+
+<div class="container-fluid">
+    <div class="card">
+    <div class="row">
+        <div class="col-md-6">
+            <select  (change)="selectChangeHandler($event)">
+                <option></option>
+                <option *ngFor="let index of stateResult"> {{index.state_id}} {{index.state_name}}</option>
+                <!-- <option *ngFor="let index of result">  {{index.state_id}}</option> -->
+            </select>
+            
+        </div>
+        <div class="col-md-6">
+            <select (change)="selectChangeHandler1($event)">
+                <option></option>
+                <option *ngFor="let index of districts.districts" value="{{index.district_id}}">
+                   {{index.district_id}} {{index.district_name}}
+                </option>
+            </select>
+            
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 10px;">
+<div class="col-md-12">
+        <form [formGroup]="formObj" (ngSubmit)="onSubmit()">
+            <!-- <input type="text" class="form-control" formControlName="date"> -->
+            <input type="date" class="form-control" formControlName="date">
+            <button class="btn btn-primary">submit</button>
+        </form>
+    </div>
+</div>
+</div>
+
+</div>
+   
+
+
+<div class="table-responsive-sm table-responsive-md table-responsive-lg">
+    <table class="table table-striped">
+        <thead> 
+            <th>CenterID</th>
+           
+            <th>address</th>
+            <th>mininum age limit</th>
+            <th>Date</th>
+            <th>vaccine</th>
+            <th>fee</th>
+            <th>fee type</th>
+            <th>slot</th>
+           
+        </thead>
+        <tbody>
+            <tr *ngFor="let index of getSlots.sessions">
+                <td>{{index.center_id}}</td>
+              
+                <td>{{index.address}}</td>
+                <td>{{index.min_age_limit}}</td>
+                <td>{{index.date}}</td>
+                <td>{{index.vaccine}}</td>
+                <td>{{index.fee}}</td>
+                <td>{{index.fee_type}}</td>
+                <td>{{index.slots}}</td>
+                
+            </tr>
+        </tbody>
+        </table>
+    </div>       

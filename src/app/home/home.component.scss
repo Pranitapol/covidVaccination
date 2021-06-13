@@ -1,0 +1,24 @@
+.container-fluid{
+    display: flex;
+    justify-content: center;
+    // margin-top: 20px;
+
+    .row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .btn{
+      position: relative;
+      left: 36%;
+      margin-top:7%;
+
+    }
+    .card{
+        padding: 20px;
+        margin-top:4%;
+        
+    transform: translateY(20px)
+    }
+}

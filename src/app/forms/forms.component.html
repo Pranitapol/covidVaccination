@@ -1,0 +1,57 @@
+<div class="container-fluid">
+    <div class="card">
+    <div class="row">
+
+        <div class="col-md-12 col-lg-12 col-sm-12">
+           
+            <form [formGroup]="formObj" method="POST" (ngSubmit)="onSubmit()">
+
+                <div class="form-group">
+                    <input type="text" [class.is-invalid]="pincode.hasError('required')&& pincode.touched"class="form-control" formControlName="pincode" placeholder="enter pincode">
+                    <span class="text-danger" *ngIf="pincode.hasError('required')&& pincode.touched">pincode is required</span>
+                </div>
+                <div class="form-group">
+                    <input type="date" formControlName="date" class="form-control">
+                    <!-- <input type="text" formControlName="date" class="form-control"> -->
+                </div>
+                <!-- <div class="form-group">
+            <input type="text" class="form-control" formControlName="age" placeholder="enter age">
+        </div> -->
+                <button class="btn btn-primary">submit</button>
+            </form>
+        </div>
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+<table class="table table-striped">
+    <thead>
+        <th>CenterID</th>
+        <th>address</th>
+
+        <th>minimum age limit</th>
+
+        <th>district name</th>
+        <th>Vaccine</th>
+        <th>fee</th>
+        <th>fee type</th>
+        <th>slots</th>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let index of result1">
+            <td>{{index.center_id}}</td>
+            <td>{{index.address}}</td>
+            <td>{{index.min_age_limit}}</td>
+
+            <td>{{index.district_name}}</td>
+            <td>{{index.vaccine}}</td>
+            <td>{{index.fee}}</td>
+            <td>{{index.fee_type}}</td>
+            <td>{{index.slots}}</td>
+        </tr>
+    </tbody>
+</table>
+    </div>
+    </div>
+</div>

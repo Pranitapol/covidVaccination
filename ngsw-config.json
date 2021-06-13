@@ -1,0 +1,41 @@
+{
+  "$schema": "./node_modules/@angular/service-worker/config/schema.json",
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "resources": {
+        "files": [
+          "/favicon.ico",
+          "/index.html",
+          "/manifest.webmanifest",
+          "/*.css",
+          "/*.js"
+        ]
+      }
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "resources": {
+        "files": [
+          "/assets/**",
+          "/*.(eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"
+        ]
+      }
+    }
+  ],"dataGroups": [
+    {
+      "name": "api-calls",
+      "urls": ["https://cdn-api.co-vin.in/api/v2/admin/location/states","https://cdn-api.co-vin.in/api/v2/admin/location/districts/*","https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/,https://cdn-api.co-vin.in/api/v2/appointment/centers/public/"],
+      "cacheConfig": {
+        "maxAge": "12d",
+        "maxSize": 10,
+        "strategy": "performance",
+        "timeout": "5s"
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+.container-fluid{
+background-color: black;
+
+.card{
+    // justify-content: center;
+    // margin:30px 10px;
+    // margin-top: 4rem;
+    // margin-bottom: 4px;
+    // margin-top: 50px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    max-height: 40rem;
+    .img-top{
+        max-height: 260px;
+    }
+
+    &:hover{
+        transition: .2s;
+    }
+}
+}
