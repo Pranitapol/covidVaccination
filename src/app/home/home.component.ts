@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { RegisterService } from "../register.service";
-import { FormGroup, FormControl } from "@angular/forms";
-import { DatePipe } from "@angular/common";
+import { RegisterService } from '../register.service';
+import { FormGroup, FormControl } from '@angular/forms';
+import { DatePipe } from '@angular/common';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -18,14 +18,14 @@ export class HomeComponent implements OnInit {
 
   formObj = new FormGroup({
     date: new FormControl('')
-  })
+  });
 
   // get data of states
   ngOnInit(): void {
     this.register.getData().subscribe(data => {
-      console.log(data)
+      console.log(data);
       this.stateResult = data.states;
-    })
+    });
 
 
 
@@ -36,12 +36,12 @@ export class HomeComponent implements OnInit {
     this.selectedValue = event.target.value;
 
     this.register.getByDistrict(this.selectedValue).subscribe(data => {
-      console.log(data)
+      console.log(data);
       this.districts = data;
-    })
+    });
   }
 
-  //select district from Dropdown
+  // select district from Dropdown
   selectChangeHandler1(event: any) {
 
     this.selectedValue1 = event.target.value;
@@ -55,15 +55,15 @@ export class HomeComponent implements OnInit {
     console.log(this.selectedValue1);
     // this.selectedValue1=this.result4.district_id;
     // console.log(this.selectedValue1);
-    
+
     // change Date format
-    this.newDate = this.datePipe.transform(this.formObj.value.date, 'dd-MM-yyyy')
+    this.newDate = this.datePipe.transform(this.formObj.value.date, 'dd-MM-yyyy');
 
     this.register.getVaccineByDistrict(this.selectedValue1, this.newDate).subscribe(data => {
-      console.log(data)
+      console.log(data);
       this.getSlots = data;
-      console.log(this.getSlots.sessions)
-    })
+      console.log(this.getSlots.sessions);
+    });
   }
 
 }

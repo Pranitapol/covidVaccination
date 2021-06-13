@@ -6,12 +6,12 @@ import { HomeComponent } from './home/home.component';
 import { LocationComponent } from './location/location.component';
 
 const routes: Routes = [
-  {path:'',component:FrontpageComponent},
-  {path:'home',component:HomeComponent},
+  {path: '', component: FrontpageComponent},
+  {path: 'home', component: HomeComponent},
   {
-    path:'pincode',component:FormsComponent
+    path: 'pincode', component: FormsComponent
   },
-  {path:'location',component:LocationComponent}
+  {path: 'location', component: LocationComponent}
 ];
 
 @NgModule({

@@ -5,7 +5,7 @@ import { RegisterService } from './register.service';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import {HttpClientModule} from '@angular/common/http';
 describe('RegisterService', () => {
-  let service: RegisterService;
+  // const service: RegisterService;
 
   // beforeEach(() => {
   //   TestBed.configureTestingModule({});
@@ -18,16 +18,16 @@ describe('RegisterService', () => {
   describe('RegisterService', () => {
 
     beforeEach(() => TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule], 
+      imports: [HttpClientTestingModule],
       providers: [RegisterService]
     }));
 
-     it('should be created', () => {
+    it('should be created', () => {
       const service: RegisterService = TestBed.get(RegisterService);
       expect(service).toBeTruthy();
      });
 
-     it('should have getData function', () => {
+    it('should have getData function', () => {
       const service: RegisterService = TestBed.get(RegisterService);
       expect(service.getData).toBeTruthy();
      });

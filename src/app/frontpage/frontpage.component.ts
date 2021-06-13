@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CarouselConfig } from "ngx-bootstrap/carousel";
+import { CarouselConfig } from 'ngx-bootstrap/carousel';
 @Component({
   selector: 'app-frontpage',
   templateUrl: './frontpage.component.html',
