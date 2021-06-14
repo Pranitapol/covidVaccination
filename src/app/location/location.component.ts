@@ -24,6 +24,7 @@ export class LocationComponent implements OnInit {
           console.log(data);
 
           this.location = data;
+          console.log(this.location)
         });
 
       });
