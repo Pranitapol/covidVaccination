@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
 
   }
   // get district by state name
-  selectChangeHandler(event: any) {
+  selectChangeHandler(event: any): void {
 
     this.selectedValue = event.target.value;
 
@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit {
   }
 
   // select district from Dropdown
-  selectChangeHandler1(event: any) {
+  selectChangeHandler1(event: any): void {
 
     this.selectedValue1 = event.target.value;
 
@@ -50,7 +50,7 @@ export class HomeComponent implements OnInit {
   }
 
   // getting slots by district id
-  onSubmit() {
+  onSubmit(): void {
     console.log(this.formObj.value);
     console.log(this.selectedValue1);
     // this.selectedValue1=this.result4.district_id;

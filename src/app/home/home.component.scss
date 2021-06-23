@@ -1,7 +1,35 @@
+@mixin ExtraSmall {
+    @media (max-width:560px){
+        @content
+    }
+};
+@mixin small{
+    @media (max-width:576px){
+        @content;
+    }
+  }
+  @mixin medium{
+    @media (min-width:577px)and(max-width:768px){
+        @content;
+    }
+  }
+  @mixin large{
+    @media (min-width:900px){
+        @content;
+    }
+  }
+
 .container-fluid{
     display: flex;
     justify-content: center;
+    background-color: whitesmoke;
     // margin-top: 20px;
+    @include ExtraSmall{
+        width: 100%;
+    }
+    @include small{
+        width: 100%;
+    }
 
     .row{
         display: flex;
@@ -18,7 +46,25 @@
     .card{
         padding: 20px;
         margin-top:4%;
-        
-    transform: translateY(20px)
+      
+    }
+}
+.container
+{
+    display: flex;
+    table{
+        text-transform: capitalize;
+        @include ExtraSmall{
+            width: 100%;
+        }
+        @include small{
+            width: 100%;
+        }
+       
+        tr:hover{
+            transform: scale(1.05);
+            
+            box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+           }
     }
 }

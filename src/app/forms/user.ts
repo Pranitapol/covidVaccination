@@ -1,4 +1,4 @@
-export class userData{
+export class UserData{
     constructor(
         public date: Date,
         public pincode: number,

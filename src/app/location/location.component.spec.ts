@@ -5,8 +5,8 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 import {HttpClientModule} from '@angular/common/http';
 import { RegisterService } from '../register.service';
 describe('LocationComponent', () => {
-  let component: LocationComponent;
-  let fixture: ComponentFixture<LocationComponent>;
+  // let component: LocationComponent;
+  // let fixture: ComponentFixture<LocationComponent>;
 
   // beforeEach(async () => {
   //   await TestBed.configureTestingModule({
@@ -33,12 +33,12 @@ describe('LocationComponent', () => {
     }));
 
     it('should be created', () => {
-      const service: RegisterService = TestBed.get(RegisterService);
+      const service: RegisterService = TestBed.inject(RegisterService);
       expect(service).toBeTruthy();
      });
 
     it('should have getData function', () => {
-      const service: RegisterService = TestBed.get(RegisterService);
+      const service: RegisterService = TestBed.inject(RegisterService);
       expect(service.getData).toBeTruthy();
      });
 

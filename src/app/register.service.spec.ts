@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-
+import { Type } from '@angular/core';
 import { RegisterService } from './register.service';
 
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
@@ -23,12 +23,12 @@ describe('RegisterService', () => {
     }));
 
     it('should be created', () => {
-      const service: RegisterService = TestBed.get(RegisterService);
+      const service: RegisterService = TestBed.inject(RegisterService);
       expect(service).toBeTruthy();
      });
 
     it('should have getData function', () => {
-      const service: RegisterService = TestBed.get(RegisterService);
+      const service: RegisterService = TestBed.inject(RegisterService);
       expect(service.getData).toBeTruthy();
      });
 

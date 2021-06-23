@@ -6,8 +6,8 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 import {HttpClientModule} from '@angular/common/http';
 import { RegisterService } from '../register.service';
 describe('HomeComponent', () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
+  // let component: HomeComponent;
+  // let fixture: ComponentFixture<HomeComponent>;
 
   // beforeEach(async () => {
   //   await TestBed.configureTestingModule({
@@ -34,12 +34,12 @@ describe('HomeComponent', () => {
     }));
 
     it('should be created', () => {
-      const service: RegisterService = TestBed.get(RegisterService);
+      const service: RegisterService = TestBed.inject(RegisterService);
       expect(service).toBeTruthy();
      });
 
     it('should have getData function', () => {
-      const service: RegisterService = TestBed.get(RegisterService);
+      const service: RegisterService = TestBed.inject(RegisterService);
       expect(service.getData).toBeTruthy();
      });
 

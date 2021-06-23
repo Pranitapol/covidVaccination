@@ -1,6 +1,25 @@
+
+@mixin small{
+  @media (max-width:560px){
+      @content;
+  }
+}
+@mixin medium{
+  @media (min-width:561px)and(max-width:740px){
+      @content;
+  }
+}
+@mixin large{
+  @media (min-width:900px){
+      @content;
+  }
+}
+
 .container-fluid{
-    // display: flex;
-    // justify-content: center;
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: whitesmoke;
     // margin-top: 20px;
 
     // .row{
@@ -16,9 +35,30 @@
 
     }
     .card{
-        padding: 20px;
-        margin-top:5%;
-        
-    transform: translateY(20px)
+        padding: 17px 40px;
+        margin-top:3%;
+      
+        // position: relative;
+    //   width: 500px;
+    //   left: 30%;
+   
+    }
+    .row:nth-child(2){
+        margin-top: 7px;
+    }
+
+    // table{
+       
+    //   @media small {
+    //     width: 20px;
+    //     height: 50px;
+    //   }
+    // }
+    table{
+      tr:hover{
+        transform: scale(1.05);
+        cursor:pointer;
+        box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+       }
     }
 }
